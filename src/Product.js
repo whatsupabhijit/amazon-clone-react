@@ -13,6 +13,7 @@ function Product() {
           <strong>19.99</strong>
         </p>
         <div className="product__rating">
+          {/* <span role="img">⭐</span> */}
           <FontAwesomeIcon icon={faStar} color="orange" />
           <FontAwesomeIcon icon={faStar} color="orange" />
           <FontAwesomeIcon icon={faStar} color="orange" />
@@ -20,6 +21,13 @@ function Product() {
           <FontAwesomeIcon icon={faStar} />
         </div>
       </div>
+
+      <img
+        src="https://images-eu.ssl-images-amazon.com/images/G/31/img20/Grocery/GW/Chocolates_PC_CC_379x304_V2._SY304_CB404777310_.jpg"
+        alt=""
+      />
+
+      <button>Add to Basket</button>
     </div>
   );
 }
