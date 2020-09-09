@@ -16,7 +16,7 @@ function Product() {
           <FontAwesomeIcon icon={faStar} color="orange" />
           <FontAwesomeIcon icon={faStar} color="orange" />
           <FontAwesomeIcon icon={faStar} color="orange" />
-          <FontAwesomeIcon icon={faStar} color="orange" />
+          <FontAwesomeIcon icon={faStar} />
           <FontAwesomeIcon icon={faStar} />
         </div>
       </div>
