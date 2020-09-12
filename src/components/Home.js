@@ -26,7 +26,7 @@ function Home() {
           <Product
             id={1116512}
             title="The Lean Startup"
-            price={"10,000"}
+            price={10000}
             image={
               "https://images-na.ssl-images-amazon.com/images/I/81BDpSIwu3L._UL1500_.jpg"
             }
@@ -36,7 +36,7 @@ function Home() {
           <Product
             id={111234112}
             title="The Lean Startup"
-            price={"59,999"}
+            price={59999}
             image={
               "https://images-na.ssl-images-amazon.com/images/I/5103Xi7yQgL._SL1024_.jpg"
             }

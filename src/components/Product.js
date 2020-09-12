@@ -17,6 +17,7 @@ function Product({ id, title, image, price, rating, remrating }) {
         image: image,
         price: price,
         rating: rating,
+        remrating: remrating,
       },
     });
   };
@@ -26,7 +27,7 @@ function Product({ id, title, image, price, rating, remrating }) {
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
-          <small>Rs. </small>
+          <small>₹ </small>
           <strong>{price}</strong>
         </p>
         <div className="product__rating">
@@ -34,12 +35,19 @@ function Product({ id, title, image, price, rating, remrating }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <FontAwesomeIcon icon={faStar} color="orange" />
+              <FontAwesomeIcon
+                key={1 + Math.random() * (100 - 1)}
+                icon={faStar}
+                color="orange"
+              />
             ))}
           {Array(remrating)
             .fill()
             .map((_, i) => (
-              <FontAwesomeIcon icon={faStar} />
+              <FontAwesomeIcon
+                key={1 + Math.random() * (100 - 1)}
+                icon={faStar}
+              />
             ))}
         </div>
       </div>
