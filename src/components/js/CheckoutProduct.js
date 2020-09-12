@@ -1,6 +1,6 @@
 import React from "react";
-import "./CheckoutProduct.css";
-import { useStateValue } from "../StateProvider";
+import "../css/CheckoutProduct.css";
+import { useStateValue } from "../../StateProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 

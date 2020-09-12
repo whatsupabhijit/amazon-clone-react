@@ -1,8 +1,8 @@
 import React from "react";
-import "./Product.css";
+import "../css/Product.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { useStateValue } from "../StateProvider";
+import { useStateValue } from "../../StateProvider";
 
 function Product({ id, title, image, price, rating, remrating }) {
   const [{ basket }, dispatch] = useStateValue();

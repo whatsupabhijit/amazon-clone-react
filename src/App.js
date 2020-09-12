@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Checkout from "./components/Checkout";
+import Header from "./components/js/Header";
+import Home from "./components/js/Home";
+import Checkout from "./components/js/Checkout";
 // import { useStateValue } from "./StateProvider";
 
 function App() {
