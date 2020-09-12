@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/js/Header";
 import Home from "./components/js/Home";
+import Login from "./components/js/Login";
 import Checkout from "./components/js/Checkout";
 // import { useStateValue } from "./StateProvider";
 
@@ -13,8 +14,7 @@ function App() {
         <Header />
         <Switch>
           <Route path="/login">
-            <h1> login </h1>
-            <h2> welcome to Login page</h2>
+            <Login />
           </Route>
           <Route path="/checkout">
             <Checkout />

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/Login.css";
 import { Link, useHistory } from "react-router-dom";
-import { auth } from "./firebase";
+import { auth } from "../../firebase";
 
 function Login() {
   const history = useHistory();
@@ -9,7 +9,7 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const signIn = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // to Stop Refresh as default behaviour on submit action
 
     auth
       .signInWithEmailAndPassword(email, password)
