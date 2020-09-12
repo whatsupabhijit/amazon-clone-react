@@ -1,24 +1,25 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./Header";
-import Home from "./Home";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Checkout from "./components/Checkout";
+// import { useStateValue } from "./StateProvider";
 
 function App() {
   return (
     <Router>
       <div className="app">
+        <Header />
         <Switch>
           <Route path="/login">
             <h1> login </h1>
             <h2> welcome to Login page</h2>
           </Route>
           <Route path="/checkout">
-            <h1> Checkout </h1>
-            <h2> welcome to Checkout page</h2>
+            <Checkout />
           </Route>
           <Route path="/">
-            <Header />
             <Home />
           </Route>
         </Switch>
