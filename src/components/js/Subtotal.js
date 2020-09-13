@@ -31,7 +31,13 @@ function Subtotal() {
         prefix={"₹"}
       />
 
-      <button onClick={(e) => history.push("/payment")}>
+      <button
+        onClick={(e) =>
+          basket?.length > 0
+            ? history.push("/payment")
+            : history.replace("/checkout")
+        }
+      >
         Proceed to Checkout
       </button>
     </div>
