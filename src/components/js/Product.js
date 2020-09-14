@@ -3,6 +3,7 @@ import "../css/Product.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { useStateValue } from "../../StateProvider";
+import { store } from "react-notifications-component";
 
 function Product({ id, title, image, price, rating, remrating }) {
   const [{ basket }, dispatch] = useStateValue();
@@ -20,6 +21,22 @@ function Product({ id, title, image, price, rating, remrating }) {
         remrating: remrating,
       },
     });
+
+    store.addNotification({
+      title: "Success!",
+      message: `${title} has successfully been added to your basket!`,
+      type: "success",
+      insert: "top",
+      container: "top-right",
+      animationIn: ["animated", "fadeIn"],
+      animationOut: ["animated", "fadeOut"],
+      dismiss: {
+        duration: 100,
+        onScreen: true,
+        showIcon: true,
+        pauseOnHover: true,
+      },
+    });
   };
 
   return (
@@ -35,19 +52,12 @@ function Product({ id, title, image, price, rating, remrating }) {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <FontAwesomeIcon
-                key={1 + Math.random() * (100 - 1)}
-                icon={faStar}
-                color="orange"
-              />
+              <FontAwesomeIcon key={i} icon={faStar} color="orange" />
             ))}
           {Array(remrating)
             .fill()
             .map((_, i) => (
-              <FontAwesomeIcon
-                key={1 + Math.random() * (100 - 1)}
-                icon={faStar}
-              />
+              <FontAwesomeIcon key={i} icon={faStar} />
             ))}
         </div>
       </div>
